@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="web.webclient_bootstrap">
+        <t t-call="web.layout">
+            <t t-set="head_web">
+                <script type="text/javascript">
+                    odoo.session_info = <t t-raw="session_info"/>;
+                </script>
+
+                <t t-call-assets="web.assets_common" t-js="false"/>
+                <t t-call-assets="web.assets_backend" t-js="false"/>
+                <t t-call-assets="web.assets_common" t-css="false"/>
+                <t t-call-assets="web.assets_backend" t-css="false"/>
+
+                <![CDATA[
+                    <!--[if lt IE 10]>
+                        <body class="ie9">
+                    <![endif]-->
+                ]]>
+
+                <script type="text/javascript">
+                    odoo.define('web.web_client', function (require) {
+                        var WebClient = require('web.WebClient');
+                        var funenc_web_client = require('funenc_web_client');
+
+                        var web_client = new funenc_web_client();
+                        $(function() {
+                            web_client.setElement($(document.body));
+                            web_client.start();
+                        });
+                        return web_client;
+                    });
+                </script>
+            </t>
+            <t t-set="head" t-value="head_web + (head or '')"/>
+            <t t-set="body_classname" t-value="'12312313'"/>
+            <div class="app-admin-wrap">
+                <!-- header -->
+                <div class="main-header">
+                </div>
+                <!-- sidebar -->
+                <div class="side-content-wrap">
+                </div>
+                <!-- body -->
+                <div class="main-content-wrap sidenav-open d-flex flex-column">
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

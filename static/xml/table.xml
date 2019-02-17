@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <!-- fnt table box -->
+    <t t-name="funenc.fnt_table">
+        <div class="fnt-table-box"></div>
+    </t>
+    <!-- fnt table header part  -->
+    <t t-name="funenc.fnt_table_header">
+        <div class="fnt-table-header">
+            <table cellspacing="0" cellpadding="0" border="0" class="layui-table">
+                <thead>
+                    <tr></tr>
+                </thead>
+            </table>
+        </div>
+    </t>
+    <!-- fnt table header checkbox -->
+    <t t-name="funenc.fnt_table_header_checkbox">
+        <th class="fnt-table-col-special">
+            <div class="fnt-table-cell fnt-cell-checkbox">
+                <input type="checkbox" name="fntTableCheckbox" />
+            </div>
+        </th>
+    </t>
+    <!-- table body -->
+    <t t-name="funenc.fnt_table_body">
+        <div class="fnt-table-body">
+            <table cellspacing="0" cellpadding="0" border="0" class="fnt-table">
+                <tbody></tbody>
+            </table>
+        </div>
+    </t>
+    <!-- table left fixed header -->
+    <t t-name="funenc.fnt_table_fixed_l">
+        <div class="fnt-table-fixed fnt-table-fixed-l"></div>
+    </t>
+    <!-- table right fixed header  -->
+    <t t-name="funenc.fnt_table_fixed_r">
+        <div class="fnt-table-fixed fnt-table-fixed-r" style="right: 16px;"></div>
+    </t>
+</templates>
