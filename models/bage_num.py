@@ -4,7 +4,7 @@ from odoo import models, api
 
 
 class BadgeNum(models.Model):
-    _name = 'funenc_theme.bage_num'
+    _name = 'funenc_theme_pub.bage_num'
 
     @api.model
     def get_badge_num(self):

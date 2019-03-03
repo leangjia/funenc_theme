@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="template" xml:space="preserve">
+    <div t-name="Fuenc.switch_btn">
+        <span t-if="widget.mode==readonly" class="switch_button switch_button_disabled">
+            <span class='slider'></span>
+        </span>
+        <span t-if="widget.value" class="switch_button switch_button_on">
+            <span class='slider'></span>
+        </span>
+        <span t-else="" class="switch_button switch_button_off">
+            <span class='slider'></span>
+        </span>
+    </div>
+</templates>

@@ -45,7 +45,7 @@
                         t-att-data-action-id="menu.action ? menu.action.split(',')[1] : ''"
                         t-att-data-menu-xmlid="menu.xmlid"
                         t-attf-class="#{inNavbar ? '' : 'dropdown-item '}o_menu_entry_lvl_#{depth}">
-                        <i class="nav-icon i-File-Horizontal-Text"></i>
+                        <i t-attf-class="nav-icon #{menu.font_icon? menu.font_icon : widget.get_default_icon(menu)}"></i>
                         <span class="nav-text">
                             <t t-esc="menu.name"/>
                         </span>
@@ -57,7 +57,7 @@
                 <!-- 有子级的情况, 通过data_item进行标识  -->
                 <li class="nav-item first_level_menu_item" t-attf-data-item="main_item_#{menu.id}">
                     <a class="nav-item-hold" href="#">
-                        <i class="nav-icon i-Library"></i>
+                        <i t-attf-class="nav-icon #{menu.font_icon? menu.font_icon : widget.get_default_icon(menu)}"></i>
                         <span class="nav-text">
                             <t t-esc="menu.name"/>
                         </span>
@@ -90,7 +90,7 @@
                                 <t t-if="second_level_menu.children.length">
                                     <li class="nav-item">
                                         <a href="#"
-                                        class="dropdown-toggle o-no-caret o_menu_header_lvl_1"
+                                        class="dropdown-toggle o-no-caret o_menu_entry_lvl_1"
                                         t-att-data-menu-xmlid="second_level_menu.xmlid"
                                         data-toggle="dropdown"
                                         role="button"

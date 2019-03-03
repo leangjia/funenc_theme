@@ -11,6 +11,8 @@ from odoo import api, fields, models
 
 _logger = logging.getLogger(__name__)
 
+# 说明，扩展增加定时任务传参功能
+
 _intervalTypes = {
     'days': lambda interval: relativedelta(days=interval),
     'hours': lambda interval: relativedelta(hours=interval),

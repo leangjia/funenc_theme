@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<data>
-		<template id="funenc_theme_style1_res" name="funenc_theme_style1_res" inherit_id="web.assets_backend">
+		<template id="funenc_theme_pub_res" name="funenc_theme_pub_res" inherit_id="web.assets_backend">
 			<xpath expr="." position="inside">
-				<link rel="stylesheet" href="/funenc_theme/static/css/themes/lite-purple.min.css" />
-				<link rel="stylesheet" href="/funenc_theme/static/css/perfect-scrollbar.css" />
-				<link rel="stylesheet" href="/funenc_theme/static/css/custom.css" />
+				<!-- css -->
+				<link rel="stylesheet" href="/funenc_theme_pub/static/css/themes/lite-purple.min.css" />
+				<link rel="stylesheet" href="/funenc_theme_pub/static/css/perfect-scrollbar.css" />
+				<link rel="stylesheet" href="/funenc_theme_pub/static/css/custom.css" />
+				<link rel="stylesheet" href="/funenc_theme_pub/static/css/animate.min.css" />
+				<!-- javascript -->
+				<script type="application/javascript" src="/funenc_theme_pub/static/lib/perfect-scrollbar.min.js" />
+				<script type="application/javascript" src="/funenc_theme_pub/static/js/funenc_switch_btn.js" />
+				<script type="application/javascript" src="/funenc_theme_pub/static/js/funenc_user_menu.js" />
+				<script type="application/javascript" src="/funenc_theme_pub/static/js/funenc_sys_tray_menu.js" />
+				<script type="application/javascript" src="/funenc_theme_pub/static/js/funenc_header.js" />
+				<script type="application/javascript" src="/funenc_theme_pub/static/js/funenc_menu.js" />
+				<script type="application/javascript" src="/funenc_theme_pub/static/js/funenc_web_client.js" />
 
-				<script type="application/javascript" src="/funenc_theme/static/lib/perfect-scrollbar.min.js" />
-				<script type="application/javascript" src="/funenc_theme/static/js/funenc_header.js" />
-				<script type="application/javascript" src="/funenc_theme/static/js/funenc_menu.js" />
-				<script type="application/javascript" src="/funenc_theme/static/js/funenc_web_client.js" />
+				<!-- list view -->
+				<script type="application/javascript" src="/funenc_theme_pub/static/js/list_view/funenc_list_render.js" />
 			</xpath>
 		</template>
 	</data>

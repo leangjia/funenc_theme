@@ -1,4 +1,4 @@
-odoo.define('funenc_web_client', function (require) {
+odoo.define('funenc.web_client', function (require) {
     "use strict";
 
     var ActionManager = require('web.ActionManager');
@@ -64,7 +64,7 @@ odoo.define('funenc_web_client', function (require) {
         },
 
         instanciate_header: function () {
-            this.appHeader = new AppHeader(self);
+            this.appHeader = new AppHeader(this);
             var fragment = document.createDocumentFragment();
             // 这样做有什么好处呢?
             return this.appHeader.appendTo(fragment).then(function () {

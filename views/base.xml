@@ -22,7 +22,7 @@
                 <script type="text/javascript">
                     odoo.define('web.web_client', function (require) {
                         var WebClient = require('web.WebClient');
-                        var funenc_web_client = require('funenc_web_client');
+                        var funenc_web_client = require('funenc.web_client');
 
                         var web_client = new funenc_web_client();
                         $(function() {

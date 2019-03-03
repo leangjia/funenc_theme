@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "funenc_theme",
+    'name': "funenc_theme_pub",
 
     'summary': """
         北京富能通科技有限公司主题""",
 
     'description': """
-        北京富能通科技有限公司主题(风格一)
+        北京富能通科技有限公司主题(public)
     """,
 
     'author': "chun.xu@funenc.com",
@@ -23,7 +23,12 @@
     ],
 
     'qweb': [
-        'static/xml/header.xml',
-        'static/xml/menu.xml'
-    ]
+        'static/xml/funenc_header.xml',
+        'static/xml/funenc_menu.xml',
+        'static/xml/funenc_table.xml',
+        'static/xml/funenc_switch_btn.xml',
+        'static/xml/funenc_user_menu.xml'
+    ],
+
+    'application': True
 }
