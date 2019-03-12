@@ -9,7 +9,7 @@ odoo.define('funenc.web_client', function (require) {
     var Menu = require('funenc.MainMenu');
     var core = require('web.core');
     
-    var FunencWebClient = WebClient.extend({
+    var FunencWebClient = WebClient.include({
         appHeader: undefined,
 
         init: function (parent) {

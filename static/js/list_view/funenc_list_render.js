@@ -9,7 +9,7 @@ odoo.define('funenc.ListRender', function (require) {
     var field_utils = require('web.field_utils');
     var Pager = require('web.Pager');
     var utils = require('web.utils');
-    
+
     var _t = core._t;
 
     /**
@@ -39,7 +39,7 @@ odoo.define('funenc.ListRender', function (require) {
             // 这里后面添个属性来控制
             // var $table = $('<table>').addClass('o_list_view table table-sm table-hover table-striped');
             var $table = $('<table>').addClass('o_list_view table table-hover table-bordered');
-            
+
             this.$el.addClass('table-responsive').append($table);
             this._computeAggregates();
             $table.toggleClass('o_list_view_grouped', this.isGrouped);
@@ -50,12 +50,12 @@ odoo.define('funenc.ListRender', function (require) {
                 $table
                     .append(this._renderHeader(true))
                     .append(this._renderGroups(this.state.data))
-                    .append(this._renderFooter());
+                // .append(this._renderFooter());
             } else {
                 $table
                     .append(this._renderHeader())
                     .append(this._renderBody())
-                    .append(this._renderFooter());
+                // .append(this._renderFooter());
             }
             if (this.selection.length) {
                 var $checked_rows = this.$('tr').filter(function (index, el) {
@@ -64,6 +64,23 @@ odoo.define('funenc.ListRender', function (require) {
                 $checked_rows.find('.o_list_record_selector input').prop('checked', true);
             }
             return BasicRenderer.prototype._renderView.apply(this);
+        },
+
+        /**
+         * Render the main body of the table, with all its content.  Note that it
+         * has been decided to always render at least 4 rows, even if we have less
+         * data.  The reason is that lists with 0 or 1 lines don't really look like
+         * a table.
+         *
+         * @private
+         * @returns {jQueryElement} a jquery element <tbody>
+         */
+        _renderBody: function () {
+            var $rows = this._renderRows();
+            // while ($rows.length < 4) {
+            //     $rows.push(this._renderEmptyRow());
+            // }
+            return $('<tbody>').append($rows);
         },
     });
 
